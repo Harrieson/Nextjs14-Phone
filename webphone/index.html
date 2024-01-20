@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>WebRTC to VOIP Asterisk Calling</title>
+<style>
+.btn {
+ box-shadow: 0px 1px 0px 0px #f0f7fa;
+ background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+ background-color:#33bdef;
+ border-radius:6px;
+ border:1px solid #057fd0;
+ display:inline-block;
+ cursor:pointer;
+ color:#ffffff;
+ font-family:Arial;
+ font-size:15px;
+ font-weight:bold;
+ padding:6px 24px;
+ text-decoration:none;
+ text-shadow:0px -1px 0px #5b6178;
+}
+
+.btn:hover {
+ background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+ background-color:#019ad2;
+}
+
+.btn:active {
+ position:relative;
+ top:1px;
+}
+</style>
+<meta charset="utf-8" />
+</head>
+<body>
+<br>
+<center>
+<H1>Answer or Call via WebRTC from/to VOIP Asterisk<br>with your PC/Laptop Microphone and Speakers/Headset</H1>
+<br>
+<br>
+<form>
+<table>
+<tr><td>Phone # </td><td><input id=phone name="Phone #"  type=text     value='' /></td></tr>
+<tr><td>Password</td><td><input id=pass  name="Password" type=password value='' /></td></tr>
+<tr><td>Extension to call</td><td><input id=extension name=extension type=text value='' /></td></tr>
+</table>
+</form>
+<br>
+<div id=buttons>
+ <button class=btn id=regbtn  onclick="register();">Register</button>
+ <button class=btn id=callbtn onclick="call();">Call</button>
+</div>
+</center>
+<script src='jssip.min.js'></script>
+<script src='sip.js'></script>
+</body>
+</html>
